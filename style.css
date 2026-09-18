@@ -1,0 +1,627 @@
+/* =========================
+   Basic Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Body
+========================= */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* =========================
+   Container
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+
+  /* Header stays at the top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* Keeps header above other elements */
+  z-index: 1000;
+}
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.logo .tagline {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+
+  /* Smooth hover effect */
+  transition: background-color 0.3s ease;
+}
+
+/* Navigation hover */
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+  height: 100vh;
+
+  /* Background image with dark overlay */
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover;
+
+  /* Space for fixed header */
+  padding-top: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+/* Hero heading */
+.hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* Hero paragraph */
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Hero buttons layout */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Common button style */
+.btn {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+
+  /* Smooth animation */
+  transition: all 0.3s ease;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Primary button hover */
+.btn-primary:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Secondary button hover */
+.btn-secondary:hover {
+  background-color: white;
+  color: #2c3e50;
+}
+
+/* =========================
+   Menu Section
+========================= */
+
+.menu {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+/* Section heading */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+
+  /* Animation starting position */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* Section heading animation */
+.section-title.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section subtitle */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+/* Menu category */
+.menu-category {
+  margin-bottom: 3rem;
+}
+
+.menu-category h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+
+  /* Red line below category */
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 0.5rem;
+}
+
+/* Menu items container */
+.menu-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Individual menu item */
+.menu-item {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+
+  /* Shadow around card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+
+  transition: transform 0.3s ease;
+}
+
+/* Menu item hover */
+.menu-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Menu item information */
+.menu-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.menu-item-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.menu-item-info p {
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Price */
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-left: 1rem;
+}
+
+/* Animation delay for menu items */
+.menu-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.menu-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.menu-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* =========================
+   About Section
+========================= */
+
+.about {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+/* About content in two columns */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* About heading */
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* About paragraph */
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* About image */
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* About image animation */
+.about-image {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+/* Contact two-column layout */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Contact headings */
+.contact-info h3,
+.contact-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Contact item */
+.contact-item {
+  margin-bottom: 1rem;
+}
+
+/* Contact item heading */
+.contact-item strong {
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #2c3e50;
+}
+
+/* =========================
+   Contact Form
+========================= */
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Form labels */
+.form-group label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Input, select and textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+
+  border: 2px solid #ddd;
+  border-radius: 5px;
+
+  font-size: 1rem;
+
+  transition: border-color 0.3s ease;
+}
+
+/* Form focus effect */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+/* =========================
+   CSS Variables
+========================= */
+
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f8f9fa;
+  --dark-text: #333;
+  --light-text: #666;
+
+  --border-radius: 8px;
+
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  /* Corrected 0.3s */
+  --transition: all 0.3s ease;
+}
+
+/* =========================
+   Animations
+========================= */
+
+/* Hero animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left side animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero content animation */
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 5rem;
+}
+
+/* Footer sections */
+.footer-content {
+  display:grid;
+
+  /* Corrected comma between 250px and 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer headings */
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Footer list */
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer links */
+.footer-section a {
+  color: #bdc3c7;
+  text-decoration: none;
+
+  transition: var(--transition);
+}
+
+/* Footer link hover */
+.footer-section a:hover {
+  color: var(--primary-color);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Social link */
+.social-link {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+
+  transition: var(--transition);
+}
+
+/* Social link hover */
+.social-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+
+  border-top: 1px solid #34495e;
+  color: #bdc3c7;
+}
+
+/* =========================
+   Tablet / Mobile
+========================= */
+
+@media (max-width: 768px) {
+  /* Smaller hero heading */
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Buttons become vertical */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+
+  /* About and contact become one column */
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Mobile navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  /* Smaller hero heading */
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  /* Smaller container padding */
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Navigation becomes vertical */
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Smaller about image */
+  .about-image img {
+    height: 300px;
+  }
+
+  /* Smaller section heading */
+  .section-title {
+    font-size: 2rem;
+  }
+}
